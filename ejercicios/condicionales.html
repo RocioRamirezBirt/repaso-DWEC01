@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONDICIONALES IF ELSE</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        // IF - ELSE
+
+        let edad = 40;
+
+        if(edad >= 18) {
+            console.log("eres mayor de edad")
+        }else {
+            console.log("eres menor de edad")
+        }
+
+        // IF ELSE IF ANIDADOS
+        
+        
+        let hora = 10;
+
+        if(hora >= 0 && hora <= 5){
+            console.log('Dejame dormir')
+        }else if(hora >= 6 && hora <= 11){
+            console.log('Buenos dias');
+        }else if(hora >=12 && hora <= 18){
+            console.log('Buenas tardes');
+        }else {
+            console.log('Buenas noches')
+        }
+
+        // OPERADOR TERNARIO (condicion) ? (si se cumple a true) : (si la cib)
+        console.log("operador ternario")
+        let mayor=(edad >= 18) 
+        ? "Eres mayor de edad" 
+        : "eres menor de edad";
+
+        console.log(mayor)
+
+
+        // SWITCH CASE
+        let dia= 1;
+        switch (dia) {
+            case 0:
+                console.log("Es domingo");
+                break;
+            case 1:
+                console.log("Es Lunes");
+                break;
+            case 2:
+                console.log("Es Martes");
+                break;
+            case 3:
+                console.log("Es Miercoles");
+                break;
+            case 4:
+                console.log("Es Jueves");
+                break;
+            case 5:
+                console.log("Es viernes");
+                break;
+            case 6:
+                console.log("Es sabado")
+                break
+            default:
+                console.log("No es un dia valido")
+                break;
+        }
+    </script>
+</body>
+</html>

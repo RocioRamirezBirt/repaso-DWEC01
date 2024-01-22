@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARREGLOS</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+
+        // ARREGLOS CON CONSTANTES
+        const a = [];
+        const b = [1,true,"Hola",['A','B','C',[1,2,3]]];
+        console.log(a);
+        console.log(b);
+        console.log(b.length);
+        console.log(b[2]);
+        console.log(b[3][2]);
+        console.log(b[3][3][2]);
+
+        // ARRAY.Of
+        const c = Array.of("x","y","z",8,9,10); //array of nos permite para crear instancias de arrays. crea un nuevo array con los elementos proporcionados como argumentos, sin importar el número o el tipo de los argumentos.
+        console.log(c);
+
+        // RELLENAR ARRAGLOS ARRAY.FILL()
+        //que se utiliza para llenar todos los elementos de un array con un valor estático, desde un índice inicial hasta un índice final. 
+        const d = Array(50).fill(false);
+        console.log(d);
+
+        // AÑADIR ELEMENTO AL FINAL DEL  ARRAY
+        const colores = ['Rojo','Verde','Azul'];
+        console.log(colores);
+
+        colores.push('morado');
+        console.log(colores);
+
+        // QUITAR ULTIMO ELEMENTO
+        colores.pop();
+        console.log(colores);
+
+        // AÑADE ELEMENTO AL PRINCIPIO DEL ARRAY
+        colores.unshift('Amarillo');
+        console.log(colores);
+        
+        // QUITA ELEMENTO AL PRINCIPIO DEL ARRAY
+        colores.shift();
+        console.log(colores);
+
+        // CONCATENA ARRAYS SIN MODIFICAR 
+        const formas = ['cuadrado','circulo','triangulo'];
+        const arrays = colores.concat(formas);
+        console.log(arrays);
+
+        // CAMBIA ELEMENTOS DE UNA ARRAY AGREGA ELEMENTOS O ELIMINA  O REMPLAZA
+
+        const numeros = [1,2,3,4,5];
+
+                //-> Ejemplo 1: Eliminar elementos (eliminar 2 elementos desde el índice 2)
+        numeros.splice(2,2);
+        console.log(numeros) //[1,2,5];
+
+                // -> Ejemplo 2: Agregar elementos (agregar 10 y 20 en el índice 2)
+        numeros.splice(2,0,10,20);
+        console.log(numeros); //[1,2,10,20,5];
+
+                // -> Ejemplo 3: Reemplazar elementos (reemplazar 20 con 30 en el índice 3)
+        numeros.splice(3,1,30);
+        console.log(numeros);  //[1,2,10,30,5]
+
+        // OBTIENE PARTE DE ELEMENTOS DE UN ARRAY SIN  MODIFICAR EL ORIGINAL
+        const frutas = ['banana','cereza','sandia','uva','pera'];
+
+            // -> Usar slice para obtener una porción del array    
+        let porcion = frutas.slice(1,3)
+        console.log(porcion); //[cereza,sandia]
+
+        
+         // BUSCAR LA PRIMERA COINCIDENCIA EN UN ARRAY  Y DEVUELVE SU INDICE  SI NO LO ENCUENTRA DEVUELVE -1
+
+         let indiceCereza = frutas.indexOf('cereza');
+        console.log(indiceCereza);
+
+        let buscar = "Melon";
+        let indice = frutas.indexOf(buscar);
+
+        if(indice != -1){
+            console.log(`El indice de menos es ${indice}`);
+        }else {
+            console.log(`La fruta ${buscar} no se encuentra en el array`);
+        }
+
+        // ITERAR ARRAY CON FOREACH
+        let imprimir = frutas.forEach(function(fruta,indice){
+            console.log(`En el indice ${indice} se encuentra ${fruta}`);
+        });
+        console.log(imprimir)
+
+        colores.forEach(function(color, index){
+            console.log(`<li id="${index}">${color}</li>`);
+        })
+
+        // CREA UN ARRAY APLICANDO UNA TRANSFORMACION A CADA ELEMENTO DEL ARRAY ORIGINAL lo recorre y aplica el cambio
+        console.log(numeros);
+        const numerosDobles = numeros.map(function(numero){
+            return numero * 2;
+        })
+        console.log(numerosDobles);
+
+        // Utilizar map para crear un nuevo array que contiene la longitud de cada fruta
+        console.log(frutas);
+        const longitudes = frutas.map(function(fruta,index,array){
+            return `${fruta} tiene ${fruta.length} caracteres`;
+        })
+        console.log(longitudes);
+
+    
+    </script>
+</body>
+</html>

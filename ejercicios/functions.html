@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCIONES</title>
+</head>
+<body>
+    <p id="demo"></p>
+    
+    <script type="text/javascript">
+        // //*Call a function which performs a calculation and returns the result:
+        // let x = myFunction(3,4);
+
+        // document.getElementById("demo").innerHTML = x;
+
+        // function myFunction(a,b){
+        //     return a * b;
+        // }
+
+        //FUNCION DECLARADA
+        function funcionDeclarada () {
+            console.log("uno");
+            console.log("dos");
+            console.log("tres");
+        }
+
+        //funcion que devuelve valor
+        function devolver(){
+            console.log("uno");
+            return 19
+            console.log("tres");
+            return "cadena de texto";
+        }
+
+        // invocacion de funcion
+       // funcionDeclarada()
+
+       let valor = devolver();
+       console.log(valor);
+
+       //funcion que recibe valor
+       function saludar(nombre,edad){ // -> parametros de una funcion
+        console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+       }
+
+       saludar("rocio",40);
+
+       //valor por defecto a los parametros de una funcion
+       function despedirse(nombre="desconocido",edad = 0){
+        console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+       }
+       despedirse();
+
+       //funciones expresadas o ANONIMAS que no tienen nombre
+       const edad = function(){ 
+        return "mi edad es de 40 años";
+       }
+
+       console.log("Hola me llamo rocio y " + edad());
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJETOS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const b =  {}
+        console.log(b)
+
+        const datos = {
+            nombre:"Jon",
+            apellido:"Doe",
+            edad:45,
+            sexo: "Masculino",
+            hobbies:["correr","estudiar","ver la tele"],
+            soltero:false,
+            contacto : {
+                email: "deaw@deaw.es",
+                tel: "482569415",
+                twitter: "@deaw"
+            },
+            saludar: function(){
+                console.log("hhola");
+            },
+
+            // HACER USO DE LA PROPIEDAD DENTRO DEL MISMO OBJETO
+            presentarse: function(){
+                console.log(`Me presento mi nombre es ${this.nombre} ${this.apellido} y tengo ${this.edad} años, mi correo electronico es. ${this.contacto.email}`)
+            }
+        }
+
+        console.log(datos)
+
+        //IMPRIMIR A LOS DATOS DEL OBJETO
+        console.log(datos.nombre)                     //-> imprime propiedad
+        console.log(datos.hobbies[1]);                //-> imprime propiedad array
+        console.log(datos.contacto.email)             // -> imprime objeto
+        datos.saludar();                              // -> imprime metodo
+        datos.presentarse()                         // -> imprime un metodo que usa propiedades dentro del objeto
+
+        // METODOS DE OBJETOS
+        
+                                //KEYS devuelve un array de las propiedades de un objeto
+        console.log(Object.keys(datos)) // ['nombre', 'apellido', 'edad', 'sexo', 'hobbies', etc]
+
+                                // VALUES Devuelve un array de los valores de las propiedades enumerables de un objeto.
+        const values = Object.values(datos) // ['Jon', 'Doe', 45, 'Masculino', Array(3), etc]
+        console.log(values)
+
+                                // ENTRIES Devuelve un array de pares [clave, valor] para cada propiedad enumerable de un objeto.
+        const  entries = Object.entries(datos)
+        console.log(entries)
+                                // HAS OWN PROPERTY Devuelve un booleano indicando si el objeto tiene la propiedad especificada
+        
+        console.log(datos.hasOwnProperty('nombre')); //true
+        const contiene = datos.hasOwnProperty('nombre');
+        
+
+        if(contiene===true){
+            console.log(`El objeto contiene esta propiedad`);
+        }else {
+            console.log(`El objeto no la contiene`)
+        }
+
+
+    </script>
+</body>
+</html>

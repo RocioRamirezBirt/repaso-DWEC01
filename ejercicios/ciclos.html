@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTRUCTURAS REPITITIVAS  LOOPS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        // *******************WHILE
+        // let contador = 0;
+
+        // while(contador <= 10){
+        //     console.log(contador);
+        //     contador++;
+        // }
+
+        /*
+        En este caso, crearemos un programa que solicita al usuario ingresar números hasta que ingrese un número negativo. Luego, imprimirá la suma de todos los números ingresados:
+        */
+        // let suma = 0;
+        // let numero;
+
+        // console.log("Por favor ingrese un numero para sumar. Si quiere finalizar ingrese un numero negativo")
+
+        // while(true) {
+
+        //     numero = parseFloat(prompt('Ingrese un numero: '));
+
+        //     if(isNaN(numero)){
+        //         alert('No es un numero porfavor ingrese un numero valido');
+        //         continue;
+        //     }
+
+        //     if(numero < 0){
+        //         break;
+        //     }
+
+        //     suma += numero;
+        // }
+
+        // console.log('la suma de los numero es ' +suma);
+
+
+        // //*********************  DO WHILE
+        // /*
+        // En este caso, crearemos un programa que solicita al usuario adivinar un número aleatorio entre 1 y 10. El bucle seguirá ejecutándose hasta que el usuario adivine correctamente:
+        // */
+
+        // const numeroAleatorio = Math.floor(Math.random() * 10)+1;
+        // let intentos = 0;
+        // let num;
+
+        // do {
+        //     num = parseInt(prompt('Ingrese un numero entre el 1 y el 10: '));
+
+        //     if(isNaN(num)){
+        //         alert('Ingrese un numero valido');
+        //         continue;
+        //     }else {
+        //         intentos++;
+        //     }
+
+        //     if(num === numeroAleatorio){
+        //         alert(`Correcto adivinaste el numero es ${num} y lo adivinaste en  ${intentos} intentos`);
+        //     }else {
+        //         alert('Incorrecto. Intentalo de nuevo')
+        //     }
+            
+        // }while(num !== numeroAleatorio) //mientras
+
+        // ******************FOR
+
+        for (let i = 0; i < 10; i++) {
+            console.log("for " +i)
+            
+        }
+
+
+    </script>
+</body>
+</html>
