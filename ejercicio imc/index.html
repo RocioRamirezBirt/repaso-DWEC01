@@ -7,9 +7,21 @@
 </head>
 <body>
   
+<form action="" name ="formulario" id="formulario">
+    <h2>calculadora del IMC para adultos</h2>
+    <label for="estatura">Estatura (en centimetros): </label>
+    <input type="text" name="estatura" id="estatura">
+    <label for="Peso">Peso: </label>
+    <input type="text" name="peso" id="peso">
 
+    <input type="button"  value="Calcular" id="btn" onclick="calcular()">
+</form>
 
+    <p id="height">Tu estatura es de: </p>
+    <p id="weight">Tu peso es de: </p>
+    <p id="IMC">Segun los datos proporcionados tu IMC es de: </p>
+    <span id="demo"></span>
     <!--javascript-->
-    <script type="module"  src="index.js"></script>
+    <script type="text/javascript"  src="index.js"></script>
 </body>
 </html>
