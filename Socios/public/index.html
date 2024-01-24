@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAREA EVALUACION</title>
+    <!-- LLAMADA A SCRIPTS-->
+</head>
+<body>
+    <h1>Tarea Evaluativa DWEC02</h1>
+    <hr>
+
+    <h2>Ejercicio 1 - Añadir Socios</h2>
+
+    <!-- Contenedor que alberga el formulario de introduccion de datos-->
+    <div id="containerSocio">
+        <form id="formNombre">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" name="name" id="nombre" value="Rocio"><br>
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" name="name" id="apellido" value="Ramirez"><br>
+            input
+            <br>
+            <input type="button" value="Añadir" onclick="capturarDatosSocio()">
+        </form>
+
+        <select name="prov" id="provincias">
+            <option value="opt1">Opcion1</option>
+            <option value="opt2">Opcion2</option>
+            <option value="opt3">Opcion3</option>
+        </select>
+        <br>
+    </div>
+
+    <hr>
+            <!---------------EJERCICIO 2 - PINTAR SOCIOS -->
+
+    <h2>Ejercicio 2 - Pintar socios en la Web</h2>            
+    <div id="contenedorPintar">
+        <input type="button" value="Pintar Lista Socios" id="btnPintarSocios" onclick="pintarListaSocios()">
+    </div>
+    <br>
+    <div id="contenedorPintarSocios"></div>
+
+
+    
+<!--LLAMADA A SCRIPTS-->
+<script src="../app/view/js/scripts.js"></script>
+</body>
+</html>
